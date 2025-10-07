@@ -1,0 +1,22 @@
+nav {
+    color: aqua;
+}
+
+.myClass {
+    color: #080;
+}
+
+#myId {
+    color: bisque;
+}
+
+div {
+    color: brown;
+    /* color: brown !important; */
+}
+/*
+employee_email => snake case
+employee-email => kebab case
+employeeEmail => camel case
+EmployeeEmail => Pascal case
+*/
