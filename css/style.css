@@ -1,22 +1,30 @@
-nav {
-    color: aqua;
-}
-
-.myClass {
-    color: #080;
-}
-
-#myId {
-    color: bisque;
-}
-
-div {
-    color: brown;
-    /* color: brown !important; */
-}
 /*
-employee_email => snake case
-employee-email => kebab case
-employeeEmail => camel case
-EmployeeEmail => Pascal case
+selector{
+    property: value;
+}
 */
+nav {
+    background-color: brown;
+    height: 70px;
+}
+.test {
+    /* color: red; */
+    /* color: rgb(255, 0, 0); */
+    color: #222f3e;
+    background-color: #c8d6e5;
+
+    /* height: 200px;
+    width: 300px; */
+
+    /* min-height: 100px;
+    max-height: 120px; */
+
+    /* width: 50%; */
+    width: 50vw;
+    /* height: 50vh; */
+
+    height: calc(100vh - 70px);
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+}
