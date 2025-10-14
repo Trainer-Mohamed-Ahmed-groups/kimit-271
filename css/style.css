@@ -1,30 +1,47 @@
-/*
-selector{
-    property: value;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    font-size: 10px;
+    --main-color: #2ab2c4;
 }
-*/
-nav {
-    background-color: brown;
-    height: 70px;
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    color: red;
+    height: 5000px;
 }
-.test {
-    /* color: red; */
-    /* color: rgb(255, 0, 0); */
-    color: #222f3e;
-    background-color: #c8d6e5;
 
-    /* height: 200px;
-    width: 300px; */
-
-    /* min-height: 100px;
-    max-height: 120px; */
-
-    /* width: 50%; */
-    width: 50vw;
-    /* height: 50vh; */
-
-    height: calc(100vh - 70px);
-    font-size: 24px;
+* {
     font-weight: bold;
-    font-family: "Roboto", sans-serif;
+}
+
+.test {
+    /* color: rgb(42, 196, 196); */
+    color: rgba(42, 196, 196, 0.7);
+    color: var(--main-color);
+    /* Red green blue alpha */
+    font-size: 2rem;
+    /* font-weight: bold; */
+}
+
+span,
+.myClass {
+    font-size: 3rem;
+    background-color: var(--main-color);
+    color: #eee;
+}
+
+.myClass {
+    border: solid 2px #000;
+}
+.bgExplain {
+    height: 500px;
+    background-image: url(../images/tiger2.jpg);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    /* background-attachment: fixed; */
+    background-position: center right; /* Shorthand */
+
+    background: fixed url(../images/tiger.jpg) no-repeat var(--main-color) center right / cover;
 }
