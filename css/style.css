@@ -1,83 +1,14 @@
-body {
-    height: 8000px;
-    margin: 0;
+.test {
+    background-color: #c2c2c2;
+    /* width: calc(100px * 5); */
+    width: calc(100vw - 150px);
 }
 
-* {
-    box-sizing: border-box;
-}
-
-.linearGradientExplain {
-    height: 300px;
-    width: 300px;
-    /* background: linear-gradient(136deg, #f00 23%, #00f 43%, #080 72%) */
-    /* background: linear-gradient(136deg, #016b61, #70b2b2); */
-    background: repeating-linear-gradient(#f00, #00f);
-}
-
-.radialGradientExplain {
-    height: 300px;
-    width: 300px;
-    /* background-image: radial-gradient(#f00, #00f); */
-    background-image: repeating-radial-gradient(#f00, #00f);
-}
-
-.conicGradientExplain {
-    height: 300px;
-    width: 300px;
-    background-image: conic-gradient(#f00, #00f);
-}
-.borderExplain {
-    height: 300px;
-    width: 300px;
-    /* border-style: solid;
-    border-width: 10px;
-    border-color: aqua; */
-    border: 10px solid aqua;
-    border-top: 10px solid aqua;
-    border-right: 20px groove #00f;
-    border-bottom: 30px outset #080;
-    border-left: 40px dotted #f00;
-    color: #f00;
-}
-.borderRadius {
-    width: 100px;
-    height: 300px;
-    background-color: #a1a1a1;
-    border-radius: 10px;
-    border-radius: 50%;
-    border-radius: 150px;
-}
-.task {
-    height: 200px;
-    width: 200px;
-    background-color: #000;
-    /* border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px; */
-
-    /* border-radius: 50%;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0; */
-
-    border-radius: 0 100px 100px 0;
-}
-.spacing {
-    height: 250px;
-    width: 250px;
-    background-color: #a1a1a1;
-    /* margin-top: 20px;
-    margin-left: 20px; */
-
-    /* margin: 20px; */
-
-    margin: 20px auto;
-
-    padding: 20px;
-    border: 10px solid #00f;
-}
-
-.parent ~ .child {
+.parent > .child {
     color: red;
     font-weight: bold;
-    font-size: 2rem;
+}
+
+.child ~ p {
+    color: #080;
 }

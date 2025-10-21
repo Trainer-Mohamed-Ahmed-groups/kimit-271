@@ -11,29 +11,36 @@
 </head>
 
 <body>
-    <div class="linearGradientExplain"></div>
-    <hr>
-    <div class="radialGradientExplain"></div>
-    <hr>
-    <div class="conicGradientExplain"></div>
-    <hr>
-    <div class="borderExplain"></div>
-    <hr>
-    <div class="borderRadius"></div>
-    <hr>
-    <div class="task"></div>
-    <hr>
-    <div class="spacing">This is content</div>
+    <!-- Select => Option -->
+    <form action="./thanks.html">
+        <input type="text" name="username">
+        <select name="courses">
+            <optgroup label="Frontend">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+            </optgroup>
+            <optgroup label="backend">
+                <option value="nodeJs">Node Js</option>
+                <option value="expressJs">Express Js</option>
+            </optgroup>
+        </select>
+        <input type="submit" value="OK">
+    </form>
+
+    <div class="test">This is new</div>
+
 
     <div class="parent">
-        <div class="test">
-            <div class="child">This is child</div>
-        </div>
+        <div class="child">This is direct child</div>
+        <section>
+            <div class="child">This is direct child</div>
+            <p>This is p 1</p>
+            <p>This is p 2</p>
+            <p>This is p 3</p>
+            <p>This is p 4</p>
+        </section>
+        <p>This is outside</p>
     </div>
-
-    <div class="child">This is outside 1</div>
-    <div class="child">This is outside 2</div>
-
 </body>
 
 </html>
