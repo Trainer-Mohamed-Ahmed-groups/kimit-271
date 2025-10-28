@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index">
+    <style>
+        body {
+            height: 5000px;
+        }
+
+        .float {
+            float: left;
+        }
+
+        .parent {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+
+        .absolute,
+        .fixed,
+        .sticky {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 10%;
+            right: 0%;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 10%;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+        }
+
+        .z-index {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: blueviolet;
+        }
+
+        .absolute-z1,
+        .absolute-z2,
+        .absolute-z3 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+        }
+
+        .absolute-z1 {
+            top: 20%;
+            right: 20%;
+            z-index: 2;
+            background-color: bisque;
+        }
+
+        .absolute-z2 {
+            top: 40%;
+            right: 40%;
+            z-index: 1;
+            background-color: beige;
+        }
+
+        .absolute-z3 {
+            top: 60%;
+            right: 60%;
+            z-index: 2;
+            background-color: antiquewhite;
+        }
+
+        .scroll {
+            font-size: 1.2rem;
+            text-align: center;
+            text-decoration: underline;
+            text-transform: capitalize;
+            width: 250px;
+            height: 200px;
+            overflow: auto;
+        }
+    </style>
+    <title>Frontend session</title>
+</head>
+
+<div class="sticky">this is sticky</div><br><br>
+
+<body>
+    <p class="float">Lorem ipsum dolor</p>
+    <div class="parent">
+        <div class="absolute">this is absolute</div>
+        <br><br>
+        <div class="fixed">this is fixed</div>
+    </div>
+    <div class="z-index">z-index
+        <div class="absolute-z1">this is Z1</div>
+        <div class="absolute-z2">this is Z2</div>
+        <div class="absolute-z3">this is Z3</div>
+    </div>
+    <p class="scroll">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam assumenda dolore officiis debitis
+        labore veritatis. Vel, error nobis, maxime autem recusandae similique consequatur atque facere distinctio
+        tempore accusantium ut mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam possimus nobis
+        sit odio obcaecati laudantium. Neque sunt nisi distinctio atque labore architecto vero pariatur, iusto
+        dignissimos molestias, et cum soluta!
+        Eveniet facere tempora earum officiis dignissimos ducimus amet est quasi possimus voluptate, provident illum
+        pariatur minima vero. Ea, vel. Dolorum quos ipsum, tempore temporibus fuga vero porro tenetur nemo vel.</p>
+
+</body>
+
+</html>

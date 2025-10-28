@@ -1,74 +1,75 @@
 body {
-    height: 5000px;
+    height: 8000px;
 }
-/* .test::first-letter { */
-.test::first-line {
-    color: red;
-    font-weight: bold;
-    font-size: 2rem;
-}
-.test::selection {
-    color: #a3a3a3;
-    background-color: #464646;
-}
-ul li::marker {
-    color: blue;
-}
-ul li {
-    background-color: #080;
-    list-style-position: inside;
-    /* list-style-image: url("../images/house-solid-full.svg"); */
-    list-style-type: armenian;
-    list-style: upper-roman inside;
-}
-.test2 {
-    color: #00f;
-}
-/* .test2::after { */
-/* .test2::before { */
-.test2:hover::after {
-    content: "N";
-    /* color: aqua; */
-    font-weight: bold;
-    font-size: 3rem;
+.floatParent {
+    background-color: #ddd;
 }
 
-div[kimit="academy"] {
-    color: chartreuse;
+.floatParent::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.floatClass {
+    float: left;
 }
 
-.displayExplain {
+/* .clear {
+    clear: both;
+} */
+
+.relative {
+    height: 450px;
+    width: 450px;
+    background-color: #17dd21;
+    position: relative;
+}
+
+.position {
     height: 200px;
     width: 200px;
-    background-color: #464646;
-}
-p span {
-    background-color: #080;
+    background-color: #1f1f1f;
     color: #fff;
-    height: 100px;
-    width: 100px;
-    margin: 50px;
-    display: inline-block;
+    font-size: 2rem;
 }
-
-div {
-    height: 100px;
-    width: 100px;
-    background-color: aqua;
+.absoluteExplain {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
-p:hover + div {
-    display: none;
+.absoluteExplain:nth-child(2) {
+    top: 40px;
+    right: 40px;
+    background-color: #00f;
+    z-index: 2;
 }
-section div {
-    display: inline-block;
+.absoluteExplain:last-child {
+    top: 80px;
+    right: 80px;
+    background-color: #45ff99;
+    z-index: 1;
 }
-table,
-th,
-td {
-    border: 1px solid rgb(30, 30, 30);
+.fixedExplain {
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
-
-table {
-    border-collapse: collapse;
-    caption-side: top;
+.stickyExplain {
+    position: sticky;
+    top: 0;
+}
+p {
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    width: 300px;
+    height: 300px;
+    background-color: #8d8d8d;
+    color: #4d4d4d;
+    overflow: auto;
+    /* text-decoration: underline #f00 4px double; */
+}
+input {
+    outline: none;
 }
