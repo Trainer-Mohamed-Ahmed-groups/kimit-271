@@ -1,75 +1,75 @@
 body {
-    height: 8000px;
-}
-.floatParent {
-    background-color: #ddd;
+    height: 5000px;
 }
 
-.floatParent::after {
-    content: "";
-    display: block;
-    clear: both;
+.spacing {
+    line-height: 22px;
+    word-spacing: 22px;
+    letter-spacing: 5px;
+    text-indent: 20px;
 }
-.floatClass {
-    float: left;
+.test {
+    height: 50px;
+    width: 50px;
+    background-color: #bababa;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
 }
-
-/* .clear {
-    clear: both;
-} */
-
-.relative {
-    height: 450px;
-    width: 450px;
-    background-color: #17dd21;
+.transform_example {
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+    margin: auto;
+    transition: 0.5s;
+    transform-origin: 100% 100%;
+}
+.transform_example:hover {
+    /* transform: translate(100px, 100px); */
+    /* transform: scale(1.5); */
+    transform: rotate(45deg);
+    /* transform: skew(-45deg); */
+}
+.card {
+    height: 220px;
+    width: 150px;
     position: relative;
+    transition: 0.5s;
+    backface-visibility: hidden;
+}
+.card:hover {
+    transform: rotateY(180deg);
+}
+.back,
+.front {
+    position: absolute;
+    inset: 0;
+    /* top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; */
+}
+.back {
+    background-color: #00f;
+    transform: rotateY(180deg);
+}
+.front {
+    background-color: #f00;
+}
+.transition_example {
+    width: 100px;
+    height: 100px;
+    background-color: #080;
+    /* transition-property: width;
+    transition-duration: 5s;
+    transition-delay: 1s;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+    transition: all 5s ease-in-out;
 }
 
-.position {
-    height: 200px;
+.transition_example:hover {
     width: 200px;
-    background-color: #1f1f1f;
-    color: #fff;
-    font-size: 2rem;
-}
-.absoluteExplain {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-.absoluteExplain:nth-child(2) {
-    top: 40px;
-    right: 40px;
-    background-color: #00f;
-    z-index: 2;
-}
-.absoluteExplain:last-child {
-    top: 80px;
-    right: 80px;
-    background-color: #45ff99;
-    z-index: 1;
-}
-.fixedExplain {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-}
-.stickyExplain {
-    position: sticky;
-    top: 0;
-}
-p {
-    font-size: 2rem;
-    text-align: center;
-    text-decoration: underline;
-    text-transform: uppercase;
-    width: 300px;
-    height: 300px;
-    background-color: #8d8d8d;
-    color: #4d4d4d;
-    overflow: auto;
-    /* text-decoration: underline #f00 4px double; */
-}
-input {
-    outline: none;
+    height: 200px;
+    background-color: #31fffc;
+    padding: 20px;
 }
