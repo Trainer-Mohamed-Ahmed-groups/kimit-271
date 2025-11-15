@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/*? ************************ Start global styles **************************/
+:root {
+    font-family: "Open Sans", sans-serif;
+
+    --primary-color: #59ab6e;
+    --secondary-color: #212934;
+    --first-bg: #efefef;
+    --second-bg: #e9eef5;
+    --primary-text-color: #29343f;
+    --secondary-text-color: #cfd6e1;
+    --gold-star: #ede861;
+    --gray-star: #bcbcbc;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+.flex {
+    display: flex;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.align-center {
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;
+}
+.relative {
+    position: relative;
+}
+/*? ************************ End global styles **************************/
+/*? ************************ Start header styles **************************/
+header {
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+    color: var(--secondary-text-color);
+    font-size: 0.8rem;
+}
+header .contact-container > a {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/*? ************************ End header styles **************************/
+/*? ************************ Start nav styles **************************/
+nav {
+    color: var(--primary-text-color);
+}
+nav ul {
+    gap: 30px;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+nav .icons-container {
+    gap: 10px;
+}
+nav .icons-container .relative span {
+    position: absolute;
+    top: -12px;
+    left: 8px;
+    background-color: #e9eef5;
+    border-radius: 10px;
+    font-size: 0.6rem;
+    padding: 5px;
+    height: 10px;
+    min-width: 10px;
+}
+/*? ************************ End nav styles **************************/
+/*? ************************ Start Hero section styles **************************/
+.hero {
+    background-color: var(--first-bg);
+    background-image: url(../img/banner_img_03.jpg);
+    padding: 120px 0;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: 90% 75%;
+    height: 40vh;
+}
+.hero .hero-content {
+    width: 40%;
+    margin-top: 10%;
+}
+.hero .hero-content h1 {
+    font-weight: 500;
+}
+.hero .hero-content h2 {
+    font-weight: 400;
+}
+.hero .hero-content p {
+    font-weight: 300;
+}
+/*? ************************ End Hero section styles **************************/
+
+/*? ************************ Start Media styles **************************/
+
+@media (max-width: 600px) {
+    :root {
+        font-size: 10px;
+    }
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        font-size: 13px;
+    }
+    .container {
+        width: 90%;
+    }
+    nav > .flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
