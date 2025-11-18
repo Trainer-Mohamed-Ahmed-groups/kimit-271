@@ -10,25 +10,32 @@
 </head>
 
 <body>
-    <h1>Welcome to Frontend Session</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolores, minus aliquam atque corporis facere possimus
-        placeat fugiat aspernatur officiis eligendi ullam quasi inventore! Dolorem minus beatae accusamus provident
-        esse?</p>
 
-    <div class="flex">
-        <div class="child">
-            <section>1</section>
-        </div>
-        <div class="child">
-            <section>2</section>
-        </div>
-        <div class="child">
-            <section>3</section>
-        </div>
-        <div class="child">
-            <section>4</section>
-        </div>
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+        <div class="child">8</div>
+        <div class="child">9</div>
     </div>
+
+    <div class="newParent">
+        <nav>This is nav</nav>
+        <div class="sidebar">This is sidebar</div>
+        <section class="content">This is out content</section>
+        <footer>This is footer</footer>
+    </div>
+
+    <button onclick="console.log('OK')">Click me </button>
+
+    <script>
+        console.log("This is internal script")
+    </script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
