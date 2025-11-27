@@ -1,103 +1,138 @@
-// var firstName = "Ali",
-//     lastName = "Khaled";
+"use strict"
+var x = 10;
 
-// console.log(firstName)
-// console.log(lastName)
+// if (x > 0) {
+//     console.log("Greater then 0")
 
-// //Concatenation
-// console.log(firstName + " " + lastName)
-// console.log(`${firstName} ${lastName}`)
-
-
-// var userAge = prompt("Please enter your age");
-
-// console.log(userAge)
-
-// // Get from user first name and last name then show the full name
-
-// var userName = prompt("Please enter your name "),
-//     userLastName = prompt("Please enter your last name "),
-//     age = prompt("Please enter your age ");
-
-// console.log(userName)
-// console.log(userLastName)
-// console.log(age)
-
-// console.log(`Your full name is : ${userName} ${userLastName} and your age is ${age}`)
-// // Get from user age then console his age in days
-// console.log(`Your age in days is ${age * 365}`)
-
-// var grade = prompt("Enter your grade")
-// console.log(456)
-// console.log(grade)
-// console.log(Number(grade) + 10)
-// console.log(+grade + 10)
+//     if (x > 100) console.log("Greater then 100")
+//     else console.log("Between 0 and 100")
+// }
+// else {
+//     console.log("Lower")
+// }
 
 
-// -------------------------------------- Object -------------------------
-var car = {
-    // Key : value
-    name: "Mercedes",
-    model: 2022,
-    isSold: true,
-    owner: undefined
+// if (x > 0) {
+//     console.log("Greater then 0")
+// }
+// else if (x == 10) {
+//     console.log("10")
+// }
+// else {
+//     console.log("Lower")
+// }
+
+
+var username;
+
+if (username == "admin") {
+    console.log("Hello admin")
+}
+else {
+    console.log("Please signup")
 }
 
-console.log(car)
 
-// Bracket notation
-console.log(car["name"])
+// x = x + 1;
 
-// Dot notation
-console.log(car.model)
+console.log(x--)
+console.log(++x)
+
+// Arthmatic
+console.log(10 % 4)
+console.log(10 % 3)
+console.log(10 % 2)
 
 
-// ----------------------------------- Function ----------------------------
-// Void
-function sayHello() {
-    console.log("Hello world")
+console.log(x)
+// x = x / 5;
+x -= 5;
+console.log(x)
+
+
+// null undefined
+var y;
+
+if (!y) { }
+// not not haga
+// 0 ""
+
+
+
+if (5 > 4 || 6 > 50) {
+    console.log("OK")
 }
 
-sayHello()
 
+console.log(5 && 78 && null && 3)
 
-// Returning value function
-function add(x = 0, y = 0) {
-    console.log(x)
-    console.log(y)
-    console.log("**********")
-    return (x + y)
+// && Return last true and first false
+
+console.log(0 || 9)
+
+// || Return last false and first true
+
+var i = 0
+switch (i) {
+    case 0:
+    case 1:
+        console.log("Zero or one")
+        break;
+    default:
+        console.log("No case")
 }
 
-console.log(add(4, 9))
-console.log(add(8, 90))
-console.log(add(88))
-console.log(add())
+// var dayNum = +prompt("Please enter day number");
 
-function add2(x, y) {
-    return x + y
+// switch (dayNum) {
+//     case 1:
+//         console.log("Saturday")
+//         break;
+//     case 2:
+//         console.log("Sunday")
+//         break;
+//     default:
+//         console.log("Not valid input")
+//         break;
+// }
+
+try {
+    console.log(first)
+} catch (error) {
+    console.error(error.message)
+} finally {
+    console.log("Ok")
 }
 
-console.log(add2(3, 6))
 
 
-var sayOk = function () { console.log('OK') }
-sayOk()
 
 
-// ----------------------------------- Array ----------------------------
-var employees = ["Ahmed", "Ali", "Ebrahim", "Youssef", "Mahmoud"]
-console.log(employees)
-console.log(employees.length)
-console.log(employees[1])
-console.log(employees[3])
-console.log(employees[employees.length - 1])
-console.log(employees.at(-1))
-employees[5] = "Mazen"
-console.log(employees)
+function getRectArea(width, height) {
+    if (isNaN(height) || isNaN(width)) {
+        throw new Error('This is not valid input')
+    }
+    else if (width <= 0 || height <= 0) {
+        throw new Error("This is a negative number")
+    }
+    else {
+        return width * height
+    }
+}
+
+// console.log(getRectArea(5, 7))
+// console.log(getRectArea(3, 10))
+
+try {
+    console.log(getRectArea(3, undefined))
+} catch (error) {
+    console.error(error)
+}
+
+console.log("test");
 
 
-var data = [["HTML", "CSS"], ["Js", "React"]]
 
-console.log(data);
-console.log(data[0][1]);
+p = 9
+
+console.log(p);
