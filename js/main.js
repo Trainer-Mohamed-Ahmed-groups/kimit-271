@@ -1,138 +1,149 @@
-"use strict"
-var x = 10;
+var x = 1;
 
-// if (x > 0) {
-//     console.log("Greater then 0")
-
-//     if (x > 100) console.log("Greater then 100")
-//     else console.log("Between 0 and 100")
-// }
-// else {
-//     console.log("Lower")
-// }
-
-
-// if (x > 0) {
-//     console.log("Greater then 0")
-// }
-// else if (x == 10) {
-//     console.log("10")
-// }
-// else {
-//     console.log("Lower")
-// }
-
-
-var username;
-
-if (username == "admin") {
-    console.log("Hello admin")
+while (x <= 10) {
+    console.log(x)
+    x++;
 }
-else {
-    console.log("Please signup")
+console.log("*************")
+console.log(x)
+console.log("**** DO WHILE LOOP *********")
+
+var y = 1;
+
+do {
+    console.log(y)
+    y++;
+} while (y <= 10);
+
+console.log("***** FOR LOOP ********")
+
+for (var i = 1; i <= 10; i++) {
+    console.log(i)
+}
+
+console.log("*******************")
+var employees = ["Mohamed", "Ali", "Khaled", "Sami", "Mahomoud"];
+
+// console.log(employees[3])
+
+for (let index = 0; index < employees.length; index++) {
+    console.log(employees[index])
 }
 
 
-// x = x + 1;
+var test = "abc";
 
-console.log(x--)
-console.log(++x)
+console.log(test)
 
-// Arthmatic
-console.log(10 % 4)
-console.log(10 % 3)
-console.log(10 % 2)
+test += "d"
+// abcd
 
-
-console.log(x)
-// x = x / 5;
-x -= 5;
-console.log(x)
-
-
-// null undefined
-var y;
-
-if (!y) { }
-// not not haga
-// 0 ""
+console.log(test)
 
 
 
-if (5 > 4 || 6 > 50) {
+const arr = ['H', 'e', 'l', 'l', 'o'];
+var text = "";
+
+for (let index = 0; index < arr.length; index++) {
+    const element = arr[index];
+    text += element;
+    console.log("************")
+    console.log("element " + element)
+    console.log("text " + text)
+}
+console.log(text)
+
+// Loop print the odd numbers (1 - 10) => 5 % 2 = 0
+
+console.log("---------------------")
+for (let t = 1; t <= 10; t++) {
+    if (t % 2 === 1) { console.log(t) }
+}
+
+console.log("---------------------")
+
+for (let t = 1; t <= 10; t += 2) {
+    console.log(t)
+}
+
+console.log("---------------------")
+
+for (let t = 1; t <= 10; t++) {
+    if (t % 2 === 0) continue;
+    console.log(t)
+}
+
+console.log("---------------------")
+
+for (let t = 1; t <= 10; t++) {
+    if (t === 4) break;
+    console.log(t)
+}
+
+
+
+var t = 3;
+if (t === 1)
+    switch (t) {
+        case 1:
+            console.log("One")
+            break;
+        case 2:
+            console.log("Two")
+            break;
+        default:
+            console.log("Other")
+    }
+
+
+console.log("----------------------------");
+// Hoisting
+console.log(p)
+var p = 5;
+
+console.log("first")
+
+
+function sayHello() {
+    var user = 5;
+    return user
+}
+
+console.log(sayHello())
+
+
+var d = 5;
+
+console.log(d);
+
+d = 7
+console.log(d);
+
+
+{
+    const m = 10
+    console.log(m)
+}
+
+var f = 5;
+console.log(f)
+var f = 9;
+console.log(f)
+
+
+sayOk()
+
+function sayOk() {
     console.log("OK")
 }
 
-
-console.log(5 && 78 && null && 3)
-
-// && Return last true and first false
-
-console.log(0 || 9)
-
-// || Return last false and first true
-
-var i = 0
-switch (i) {
-    case 0:
-    case 1:
-        console.log("Zero or one")
-        break;
-    default:
-        console.log("No case")
-}
-
-// var dayNum = +prompt("Please enter day number");
-
-// switch (dayNum) {
-//     case 1:
-//         console.log("Saturday")
-//         break;
-//     case 2:
-//         console.log("Sunday")
-//         break;
-//     default:
-//         console.log("Not valid input")
-//         break;
-// }
-
-try {
-    console.log(first)
-} catch (error) {
-    console.error(error.message)
-} finally {
-    console.log("Ok")
-}
+// var sayOk = function () { console.log("OK") }
 
 
-
-
-
-function getRectArea(width, height) {
-    if (isNaN(height) || isNaN(width)) {
-        throw new Error('This is not valid input')
-    }
-    else if (width <= 0 || height <= 0) {
-        throw new Error("This is a negative number")
-    }
-    else {
-        return width * height
-    }
-}
-
-// console.log(getRectArea(5, 7))
-// console.log(getRectArea(3, 10))
-
-try {
-    console.log(getRectArea(3, undefined))
-} catch (error) {
-    console.error(error)
-}
-
-console.log("test");
-
-
-
-p = 9
-
-console.log(p);
+console.log(5 * "9");
+console.log(5 + "9");
+console.log(5 + true)
+console.log(5 - [])
+var res = []
+if ([]) { console.log("first") }
