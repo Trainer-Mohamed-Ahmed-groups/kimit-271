@@ -1,3 +1,6 @@
-body {
-    height: 5000px;
+.newClass {
+    color: aqua;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
 }
