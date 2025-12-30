@@ -1,102 +1,99 @@
-console.log(window)
-console.log(document)
-console.log(document.styleSheets)
-console.log(document.head)
-console.log(document.body)
+var parent = document.getElementById("parent");
 
-/**********************  */
-var myId = document.getElementById("testId")
-console.log(myId)
-let myClass = document.getElementsByClassName("testClass")
-console.log(myClass)
-let myTags = document.getElementsByTagName("div")
-console.log(myTags)
-
-let myInputs = document.getElementsByName("username")
-console.log(myInputs)
+console.log(parent)
+console.log(parent.firstElementChild)
+console.log(parent.lastElementChild)
+console.log(parent.children)
+console.log(parent.children[1].nextElementSibling)
+console.log(parent.children[1].previousElementSibling)
 
 
-console.log(document.forms)
-console.log(document.forms[1])
-console.log(document.forms.second)
-console.log(document.images)
 
 
-console.log(document.querySelector('#testId'))
-console.log(document.querySelectorAll("section > div.testClass"))
-console.log(document.querySelector('section'))
-console.log(document.querySelector('section').innerHTML)
-console.log(document.querySelector('section').outerHTML)
-console.log(document.querySelector('section').innerText)
+console.log(parent.childNodes)
+console.log(parent.firstChild)
+console.log(parent.lastChild)
+console.log(parent.children[1].nextSibling)
+console.log(parent.children[1].previousSibling)
+// *////////////////////////////////////////////////////////////////////////
+var myElement = document.createElement('span')
+myElement.textContent = "I am span from Js"
+// parent.insertBefore(myElement, parent.children[0])
+parent.appendChild(myElement)
 
-function addContent() {
-    document.querySelector('section').innerHTML = `
-    <div class="hello"><span>This is from JS</span>
-    </div>`
-}
-
-function getValue() {
-    console.log(myInputs[0].value)
-}
-/***************************************** */
-let userInput = document.querySelector('#userInput'),
-    userOutput = document.querySelector('#output');
-
-console.log(userInput)
-console.log(userOutput)
-
-function greeting() {
-    userOutput.innerHTML = "Hello " + userInput.value
-}
+parent.innerHTML += 'test'
 
 
-let testInput2 = document.querySelector("#testInput2");
 
-console.log(testInput2.getAttribute("placeholder"))
 
-// testInput2.setAttribute("name", "employee name")
 
-let passwordBtn = document.getElementById("passwordBtn")
+var myBtn = document.querySelector('#myBtn');
 
-function handlePassword() {
-    if (testInput2) {
-        testInput2.setAttribute("type", "text");
-        passwordBtn.textContent = "Hide password"
+// myBtn.onclick = function () {
+//     console.log("Clicked 1")
+// }
+
+// myBtn.onclick = function () {
+//     console.log("Clicked 2")
+// }
+
+window.addEventListener('load', () => console.log("Loaded"))
+
+
+myBtn.addEventListener('contextmenu', function () {
+    console.log("Right Click")
+})
+
+var usernameInput = document.getElementsByName('username')[0]
+
+document.forms[0].addEventListener('submit', (ev) => {
+    if (usernameInput.value.length < 8) {
+        ev.preventDefault()
+        document.getElementById('errorUsername').textContent = "Please enter a valid username"
     }
-    else {
-        testInput2.setAttribute("type", "password")
-        passwordBtn.textContent = "Show password"
+})
+
+myBtn.addEventListener('mousedown', () => console.log("Down"))
+myBtn.addEventListener('mouseup', () => console.log("Up"))
+
+
+usernameInput.addEventListener('focus', () => { console.log("Focused") })
+usernameInput.addEventListener('blur', () => { console.log("Blur") })
+
+
+// usernameInput.addEventListener('keydown', (ev) => { console.log(ev.target.value) })
+// usernameInput.addEventListener('keypress', (ev) => { console.log(ev.target.value) })
+usernameInput.addEventListener('keyup', (ev) => { console.log(ev.target.value); console.log("Up") })
+usernameInput.addEventListener('change', (ev) => { console.log(ev.target.value); console.log("Changed") })
+
+/******************************************************************************** */
+// JS BOM
+console.log(window.location)
+
+
+// var test = confirm("Please enter")
+// console.log(test)
+
+
+// localStorage.setItem('theme', 'dark')
+// console.log(localStorage.getItem('theme'))
+// localStorage.removeItem('theme')
+// localStorage.clear()
+console.log(localStorage.key(0))
+let theme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
+
+
+document.body.className = theme
+
+function handleTheme() {
+    localStorage.removeItem('user')
+    if (theme === 'dark') {
+        theme = 'light'
     }
+    else { theme = 'dark' }
+    localStorage.setItem('theme', theme)
+    document.body.className = theme
 }
 
-
-/************************* */
-let newOutput = document.getElementById("newOutput");
-
-console.log(newOutput)
-
-var mySpan = document.createElement("span"),
-    myComment = document.createComment("This is from Js"),
-    myContent = document.createTextNode('This is text from JS')
-
-mySpan.append(myContent, myComment)
-newOutput.appendChild(mySpan)
-newOutput.style.color = "#F00"
-
-
-console.log(document.getElementsByTagName("section")[0].children)
-console.log(document.getElementsByTagName("section")[0].childNodes)
-
-
-let parent = document.getElementById("parent");
-
-
-console.log(parent.classList)
-console.log(parent.classList.item(0))
-
-function classExplain() {
-    // parent.className = "newClass"
-    // parent.classList.add("newClass")
-    // parent.classList.remove("no")
-    parent.classList.toggle("newClass")
-}
+document.getElementById('themeBtn').addEventListener('click', handleTheme)
+document.cookie = "username=John Doe; expires=Thu, 29 Dec 2025 12:00:00 UTC";

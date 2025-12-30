@@ -10,53 +10,26 @@
 </head>
 
 <body>
-    <div id="testId">this is for test ID</div>
-    <div class="testClass">This is test for class</div>
-    <div class="testClass">This is test for class</div>
-    <div class="testClass">This is test for class</div>
-
-    <section>
-        <div class="testClass">This is test in section</div>
-        <nav>
-            <div class="testClass">This is test in nav</div>
-        </nav>
+    <div id="parent">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
         <!-- Comment -->
-    </section>
+        <div class="item">4</div>
+    </div>
 
-    <form action="">
-        <input type="text" name="username" placeholder="Please enter your name">
+    <button id="myBtn">Click me</button>
+    <hr>
+    <form action="thanks.html">
         <input type="text" name="username">
-        <input type="text" name="username">
-        <input type="text" name="username">
+        <span id="errorUsername"></span>
+        <br>
+        <input type="submit" value="Ok">
     </form>
 
-    <form action="" id="second"></form>
-
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <button onclick="addContent()">Click me</button>
-    <button onclick="getValue()">Click me 2 </button>
-
-    <hr>
-    <!-- ----------------------------- -->
-    <input type="text" id="userInput">
-    <div id="output"></div>
-    <button onclick="greeting()">Show</button>
-    <!-- ----------------------------- -->
-    <hr>
-    <input type="password" id="testInput2" placeholder="Test input 2">
-    <button id="passwordBtn" onclick="handlePassword()">Show password</button>
-
-    <div id="newOutput"></div>
-
-
-    <hr>
-    <div id="parent" class="ok no thanks">This is content</div>
-    <button onclick="classExplain()">Click</button>
-    <script src="./js/main.js"></script>
+    <button id="themeBtn">Handle theme</button>
+    <!-- <script src="./js/main.js"></script> -->
+    <script src="./js/session.js"></script>
 </body>
 
 </html>

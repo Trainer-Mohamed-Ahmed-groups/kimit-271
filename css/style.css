@@ -1,6 +1,4 @@
-.newClass {
-    color: aqua;
-    font-weight: bold;
-    text-align: center;
-    font-size: 2rem;
+.dark {
+    background-color: #242424;
+    color: #fff;
 }
