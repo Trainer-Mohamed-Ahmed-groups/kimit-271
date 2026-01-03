@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #f90;
+}
+@layer {
+    p {
+        @apply font-black text-red-600 shadow-2xl shadow-amber-300;
+    }
+}
