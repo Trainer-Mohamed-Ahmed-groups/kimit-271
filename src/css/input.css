@@ -1,7 +1,12 @@
 @import "tailwindcss";
-
 @theme {
-    --color-primary: #f90;
+    --font-poppins: Poppins, sans-serif;
+}
+
+@layer components {
+    .card {
+        @apply rounded-2xl m-1.5 p-5;
+    }
 }
 @layer {
     p {

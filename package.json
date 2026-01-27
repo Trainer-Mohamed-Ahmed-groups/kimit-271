@@ -1,7 +1,15 @@
 {
-  "name": "tailwind_explain",
+  "name": "kimit-271",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/Trainer-Mohamed-Ahmed-groups/kimit-271#readme",
+  "bugs": {
+    "url": "https://github.com/Trainer-Mohamed-Ahmed-groups/kimit-271/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trainer-Mohamed-Ahmed-groups/kimit-271.git"
+  },
   "license": "ISC",
   "author": "",
   "type": "commonjs",
